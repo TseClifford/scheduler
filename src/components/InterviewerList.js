@@ -1,16 +1,17 @@
 import React from "react";
 import InterviewerListItem from "./InterviewerListItem";
+
 import "./InterviewerList.scss";
 
 export default function InterviewerList({ interviewers, setInterviewer, interviewer }) {
-  const listItems = interviewers.map((person) => {
+  const listItems = interviewers.map((individual) => {
     return (
       <InterviewerListItem
-        id={person.id}
-        name={person.name}
-        avatar={person.avatar}
-        selected={person.id === interviewer ? true : false}
-        setInterviewer={setInterviewer}
+        key={individual.id}
+        name={individual.name}
+        avatar={individual.avatar}
+        selected={individual.id === interviewer}
+        setInterviewer={() => setInterviewer(individual.id)}
       />
     )
   });
