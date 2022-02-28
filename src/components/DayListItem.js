@@ -12,13 +12,13 @@ export default function DayListItem(props) {
 
   const formatSpots = (numSpots) => {
     if (numSpots === 0) {
-      return "no spots remaining"
+      return "no spots remaining";
     }
     if (numSpots === 1) {
-      return `${numSpots} spot remaining`
+      return `${numSpots} spot remaining`;
     }
-    return `${numSpots} spots remaining`
-  }
+    return `${numSpots} spots remaining`;
+  };
 
   return (
     <li onClick={props.onChange} className={dayClass} selected={props.selected}>

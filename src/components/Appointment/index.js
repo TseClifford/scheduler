@@ -3,7 +3,7 @@ import Header from "./Header";
 import Show from "./Show";
 import Empty from "./Empty";
 import Form from "./Form";
-import useVisualMode from "../../hooks/useVisualMode"
+import useVisualMode from "../../hooks/useVisualMode";
 
 import "./styles.scss";
 
@@ -26,19 +26,7 @@ export default function Appointment(props) {
           interviewer={props.interview.interviewer}
         />
       )}
-      {mode === CREATE && (
-        <Form
-          interviewers={[]}
-        />
-      )}
+      {mode === CREATE && <Form interviewers={[]} />}
     </article>
   );
 }
-
-// {props.interview ?
-//   <Show
-//     student={props.interview.student}
-//     interviewer={props.interview.interviewer}
-//   />
-//   :
-//   <Empty />}

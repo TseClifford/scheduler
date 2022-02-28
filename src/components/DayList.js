@@ -11,12 +11,8 @@ export default function DayList(props) {
         selected={item.name === props.value}
         onChange={() => props.onChange(item.name)}
       />
-    )
-  })
+    );
+  });
 
-  return (
-    <ul>
-      {listDay}
-    </ul>
-  )
+  return <ul>{listDay}</ul>;
 }
