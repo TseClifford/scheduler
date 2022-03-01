@@ -59,7 +59,7 @@ export default function Application(props) {
         });
       })
       .catch((err) => {
-        console.log(err);
+        throw err;
       });
   }
 
@@ -82,7 +82,7 @@ export default function Application(props) {
         });
       })
       .catch((err) => {
-        console.log(err);
+        throw err;
       });
   }
 
