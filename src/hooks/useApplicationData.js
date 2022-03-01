@@ -26,9 +26,11 @@ export default function useApplicationData() {
     });
   }, []);
 
-  function updateSpots(day, days, appointments) {
-    const indexOfDay = days.findIndex((dayItem) => dayItem.name === day);
-    const dayAppointments = days[indexOfDay].appointments;
+  function updateSpots(state, appointments) {
+    const indexOfDay = state.days.findIndex(
+      (dayItem) => dayItem.name === state.day
+    );
+    const dayAppointments = state.days[indexOfDay].appointments;
     let spots = 0;
 
     dayAppointments.forEach((id) => {
@@ -37,8 +39,8 @@ export default function useApplicationData() {
       }
     });
 
-    const updateDayObj = { ...days[indexOfDay], spots }; // Update spots in day
-    const updateDaysArr = [...days]; // Spread days array to new array
+    const updateDayObj = { ...state.days[indexOfDay], spots }; // Update spots in day
+    const updateDaysArr = [...state.days]; // Spread days array to new array
     updateDaysArr[indexOfDay] = updateDayObj; // Update existing day with new updated spots day
 
     return updateDaysArr;
@@ -55,7 +57,7 @@ export default function useApplicationData() {
       [id]: appointment,
     };
 
-    const days = updateSpots(state.day, state.days, appointments);
+    const days = updateSpots(state, appointments);
 
     return axios
       .put(`/api/appointments/${id}`, { interview })
@@ -82,7 +84,7 @@ export default function useApplicationData() {
       [id]: appointment,
     };
 
-    const days = updateSpots(state.day, state.days, appointments);
+    const days = updateSpots(state, appointments);
 
     return axios
       .delete(`/api/appointments/${id}`, { interview })
