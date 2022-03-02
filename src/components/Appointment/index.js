@@ -66,7 +66,7 @@ export default function Appointment(props) {
       {mode === CONFIRM && <Confirm onCancel={back} onConfirm={destroy} />}
       {mode === EDIT && (
         <Form
-          student={props.interview.student}
+          name={props.interview.student}
           interviewer={props.interview.interviewer.id}
           interviewers={props.interviewers}
           onCancel={back}
