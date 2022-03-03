@@ -1,7 +1,9 @@
 Interview Scheduler
 =========
 
-Interview Scheduler is a simple scheduling web application built with Node, React, and Postgres. Bundled with Cypress and Jest testing frameworks.\
+Interview Scheduler is a simple web application that allows users to schedule interviews during the week.\
+Built with Node, React, and Postgres, and developed with Cypress and Jest testing frameworks.
+
 https://ct-scheduler-lhl.netlify.app/
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/fcb7b8d4-56f7-412c-a3fc-355064f3e331/deploy-status)](https://app.netlify.com/sites/ct-scheduler-lhl/deploys)
