@@ -11,6 +11,7 @@ import {
 import useApplicationData from "../hooks/useApplicationData";
 
 export default function Application(props) {
+  // Import from hook
   const { state, setDay, bookInterview, cancelInterview } =
     useApplicationData();
 

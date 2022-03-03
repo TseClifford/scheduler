@@ -10,6 +10,7 @@ export default function DayListItem(props) {
     { "day-list__item--full": !props.spots }
   );
 
+  // Conditional rendering based on number of spots calculation
   const formatSpots = (numSpots) => {
     if (numSpots === 0) {
       return "no spots remaining";

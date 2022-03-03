@@ -9,6 +9,7 @@ export default function useApplicationData() {
     interviewers: {},
   });
 
+  // Reassign variable to change inner day value in state without mutation
   const setDay = (day) => setState((prev) => ({ ...prev, day }));
 
   useEffect(() => {
@@ -26,6 +27,7 @@ export default function useApplicationData() {
     });
   }, []);
 
+  // Returns a new days array with updated spots given state and new appointments object
   function updateSpots(state, appointments) {
     const indexOfDay = state.days.findIndex(
       (dayItem) => dayItem.name === state.day

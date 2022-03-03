@@ -32,7 +32,7 @@ export default function Appointment(props) {
     };
     transition(SAVE);
     props
-      .bookInterview(props.id, interview)
+      .bookInterview(props.id, interview) // passes interview back to parent function
       .then(() => transition(SHOW))
       .catch(() => transition(ERROR_SAVE, true));
   };
@@ -41,7 +41,7 @@ export default function Appointment(props) {
     const interview = null;
     transition(DELETE, true);
     props
-      .cancelInterview(props.id, interview)
+      .cancelInterview(props.id, interview) // passes null interview back to parent function
       .then(() => transition(EMPTY))
       .catch(() => transition(ERROR_DELETE, true));
   };
