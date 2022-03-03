@@ -30,3 +30,9 @@ npm test
 ```sh
 npm run storybook
 ```
+
+## Dependencies
+
+- Node 12.x or above
+- NPM 5.x or above
+- PG 6.x
