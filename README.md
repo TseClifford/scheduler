@@ -8,16 +8,14 @@ Built with Node, React, and Postgres, and developed with Cypress and Jest testin
   * schedule an interview in an open slot
   * make edits to existing interview
   * delete an existing interview.
-<br>
-<br>
+
 * The appointment component will conditionally render based on the state:
   * SHOW - display scheduled existing interview
   * EMPTY - display empty slot with an add icon
   * CONFIRM - display confirmation window prior to deletion
   * STATUS - display loading icon when saving or deleting
   * ERROR - display error when there is an issue
-<br>
-<br>
+
 * The sidebar components will conditionally render based on the state:
   * Spots remaining will update concurrently with scheduling changes
   * The day of week will be highlighted when selected
